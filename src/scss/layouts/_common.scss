@@ -1,0 +1,43 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: $white;
+}
+
+#wrapper {
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.inner-wrapper {
+    display: flex;
+}
+
+h2 {
+    font-size: 72px;
+    font-weight: 800;
+    color: $white;
+
+    span:not(.subtitle) {
+        color: $red;
+    }
+}
+
+a,
+button,
+input[type='submit'] {
+    transition: opacity .3s ease, background .3s ease, color .3s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 32px;
+}

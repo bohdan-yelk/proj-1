@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+}
+
+// Import abstract
+@import './abstracts/variables';
+@import './abstracts/mixins';
+@import './abstracts/include-media';
+
+// Import base
+@import './base/fonts';
+@import './base/typography';
+@import './base/icons';
+@import './base/animations';
+
+// Import layouts
+@import './layouts/common';
+@import './layouts/header';
+@import './layouts/footer';
+
+// Import components
+@import './components/main-section';
+@import './components/why-we-section';
+
+// Import pages
+@import './pages/home';

@@ -1,0 +1,15 @@
+@import './abstracts/normalize';
+
+$enable-flex: true;
+$enable-grid-classes: true;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1024px
+);
+
+// @import '~bootstrap/scss/bootstrap-grid';
+// @import '~wowjs/css/libs/animate';
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";

@@ -1,0 +1,59 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: $body-bg;
+  font-family: 'Open Sans', $font-stack;
+  font-weight: 400;
+  line-height: 1.45;
+  font-size: 0.85rem;
+  color: $body-color;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 2.75rem 0 1rem;
+  font-family: 'Gotham Pro', $font-stack;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.833rem;
+}
+
+small,
+.text_small {
+  font-size: 0.833rem;
+  font-family: 'Open Sans', $font-stack;
+  font-weight: 400;
+}

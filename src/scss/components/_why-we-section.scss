@@ -1,0 +1,51 @@
+.why-we-section {
+    padding: 60px 0 167px;
+    background-color: $gray-100;
+
+    .title-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 100px;
+
+        h2 {
+            margin-left: -24%;
+        }
+    }
+
+    .content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        line-height: 36px;
+
+        h2 {
+            font-size: 48px;
+            line-height: auto;
+
+            .subtitle {
+                display: block;
+                font-size: 24px;
+            }
+        }
+
+        h3 {
+            margin: 0 0 40px;
+            font-weight: 700;
+        }
+    }
+
+    .col {
+        padding: 0 80px;
+        width: 53%;
+
+        &:first-of-type {
+            width: 43%;
+        }
+
+        &-fluid {
+            display: flex;
+            width: 100%;
+        }
+    }
+}
