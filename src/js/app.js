@@ -17,6 +17,8 @@ import { log } from './utils'
 ;($ => {
   log('Ready')
 
+  $(document).ready(function() {
+
   $(".burger").click(function() {
     $('#header').toggleClass("active")
   })
@@ -36,6 +38,30 @@ import { log } from './utils'
     dots: false,
     arrows: true
   })
+
+  //news-slider and scroll bar 
+
+  let $slider = $('#news-slider')
+  let $progressBar = $('.progress')
+  let $progressBarLabel = $( '.slider__label' );
+
+  $slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    let calc = ((nextSlide) / (slick.slideCount-1)) * 100
+
+    $progressBar.css('background-size', + calc + '% 100%').attr('aria-valuenow', calc)
+
+    $progressBarLabel.text(calc + '% completed')
+  })
+
+  $('#news-slider').slick({
+    // infinite: false,
+    dots: false,
+    arrows: true,
+    slidesToShow: 2
+  })
+
+
+  });
 
   /* --------  Apply global listeners  -------- */
 })(window.jQuery)

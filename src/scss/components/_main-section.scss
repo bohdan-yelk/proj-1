@@ -99,18 +99,32 @@
         max-width: 950px;
     }
 
-    .slick-arrow {
-        bottom: -15px;
-        top: inherit;
-        z-index: 10;
+    .slick{
+        &-arrow {
+            bottom: -15px;
+            top: inherit;
+            z-index: 10;
 
-        &.slick-prev {
-            left: inherit;
-            right: 65px;
+            &:before {
+                font-family: 'icomoon';
+            }
         }
 
-        &.slick-next {
+        &-prev {
+            left: inherit;
+            right: 65px;
+
+            &:before {
+                content: '\e902';
+            }
+        }
+
+        &-next {
             right: 25px;
+
+            &:before {
+                content: '\e901';
+            }
         }
     }
 

@@ -16,6 +16,10 @@
 
     a {
         color: $white;
+
+        &:hover {
+            color: rgba(255,255,255, .5);
+        }
     }
 
     &.active {
@@ -89,6 +93,12 @@
         @include media('<=desktop') {
             text-align: left;
             margin-bottom: 50px;
+        }
+
+        &.active {
+            a {
+                color: rgba(255,255,255, .5);
+            }
         }
     }
 }
