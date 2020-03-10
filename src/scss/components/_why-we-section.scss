@@ -1,6 +1,7 @@
 .why-we-section {
     padding: 60px 0 167px;
     background-color: $gray-100;
+    color: rgba(255,255,255, .75);
 
     .title-wrapper {
         display: flex;
@@ -8,7 +9,7 @@
         margin-bottom: 100px;
 
         h2 {
-            margin-left: -24%;
+            margin-left: -22.5%;
         }
     }
 
@@ -20,18 +21,24 @@
         line-height: 36px;
 
         h2 {
+            margin-bottom: 40px;
             font-size: 48px;
+            font-weight: 700;
             line-height: auto;
+            color: $white;
 
             .subtitle {
                 display: block;
+                margin-bottom: 20px;
                 font-size: 24px;
+                font-weight: 400;
             }
         }
 
         h3 {
             margin: 0 0 40px;
             font-weight: 700;
+            color: $white;
         }
 
         p {
@@ -50,6 +57,16 @@
         &-fluid {
             display: flex;
             width: 100%;
+
+            .content {
+                width: 40%;
+                padding-right: 105px;
+            }
+
+            .img-block {
+                width: 60%;
+                background: radial-gradient(50% 50% at 50% 50%, #303030 0%, rgba(48, 48, 48, 0) 100%);
+            }
         }
     }
 }

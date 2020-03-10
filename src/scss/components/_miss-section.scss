@@ -1,0 +1,17 @@
+.miss-section {
+    background-color: $gray;
+
+    h2 {
+        font-weight: 400;
+        span {
+            display: block;
+            font-weight: 700;
+            color: $white;
+        }
+    }
+
+    .title-wrapper,
+    .slider-wrapper {
+        width: 50%;
+    }
+}

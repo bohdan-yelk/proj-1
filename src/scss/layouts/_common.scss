@@ -17,6 +17,40 @@ body {
     display: flex;
 }
 
+img {
+    max-width: 100%;
+}
+
+address {
+    font-style: normal;
+}
+
+time,
+.address {
+    position: relative;
+    padding-left: 35px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    color: $white;
+
+    &:before {
+        position: absolute;
+        content: '\e903';
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        font-family: 'icomoon';
+        color: rgba(255,255,255, .5);
+    }
+}
+
+.address {
+    &:before {
+        content: '\e905';
+    }
+}
+
 h2 {
     font-size: 72px;
     font-weight: 800;
@@ -33,10 +67,21 @@ input[type='submit'] {
     transition: opacity .3s ease, background .3s ease, color .3s ease;
 }
 
+input[type='submit'],
+textarea {
+    padding: 0 0 10px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    color: rgba(255,255,255, .75);
+    border-bottom: 1px solid $white
+}
+
 a {
     text-decoration: none;
 
     &.more,
+    &.submit,
     &.subscribe {
         position: relative;
         font-size: 16px;
@@ -70,4 +115,32 @@ a {
 p {
     font-size: 16px;
     font-weight: 32px;
+}
+
+.download-list {
+
+    li:not(:last-child) {
+        margin-bottom: 24px;
+    }
+
+    a {
+        position: relative;
+        padding-left: 48px;
+        font-size: 18px;
+        font-weight: normal;
+        line-height: 36px;
+
+        &:before {
+            position: absolute;
+            content: '\e900';
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            padding: 10px;
+            font-family: 'icomoon';
+            color: $white;
+            border-radius: 50%;
+            background-color: $red;
+        }
+    }
 }
