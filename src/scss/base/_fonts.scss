@@ -14,7 +14,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
-  speak: none;
+  // speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -65,6 +65,6 @@
 .icon-user:before {
   content: "\e90c";
 }
-.icon-youtube:before {
-  content: "\ea9d";
+.icon-youtube-with-circle:before {
+  content: "\e90d";
 }

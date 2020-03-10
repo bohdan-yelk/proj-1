@@ -31,5 +31,11 @@ import { log } from './utils'
   }
   })
 
+  $('#miss-slider').slick({
+    infinite: true,
+    dots: false,
+    arrows: true
+  })
+
   /* --------  Apply global listeners  -------- */
 })(window.jQuery)

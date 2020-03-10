@@ -41,13 +41,13 @@ time,
         transform: translateY(-50%);
         left: 0;
         font-family: 'icomoon';
-        color: rgba(255,255,255, .5);
+        color: rgba(255, 255, 255, .5);
     }
 }
 
 .address {
     &:before {
-        content: '\e905';
+        content: '\e905 ';
     }
 }
 
@@ -67,17 +67,25 @@ input[type='submit'] {
     transition: opacity .3s ease, background .3s ease, color .3s ease;
 }
 
-input[type='submit'],
+input[type='text'],
 textarea {
     padding: 0 0 10px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 25px;
-    color: rgba(255,255,255, .75);
-    border-bottom: 1px solid $white
+    color: $white;
+    border: none;
+    border-bottom: 1px solid $white;
+    background-color: transparent;
+    outline: none;
+
+    &::placeholder {
+        color: rgba(255, 255, 255, .75);
+    }
 }
 
-a {
+a,
+button {
     text-decoration: none;
 
     &.more,
@@ -88,6 +96,8 @@ a {
         font-weight: 600;
         line-height: 22px;
         color: $white;
+        border: none;
+        background-color: transparent;
 
         &:after {
             position: absolute;
@@ -98,11 +108,11 @@ a {
             font-family: 'icomoon';
             color: inherit;
             transition: right .3s ease;
-            
+
         }
 
         &:hover {
-            color: rgba(255,255,255, .5);
+            color: rgba(255, 255, 255, .5);
 
             &:after {
                 right: -35px;
@@ -114,7 +124,6 @@ a {
 
 p {
     font-size: 16px;
-    font-weight: 32px;
 }
 
 .download-list {

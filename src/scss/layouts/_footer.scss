@@ -1,0 +1,39 @@
+#footer {
+    padding: 29px 0;
+    background-color: $gray;
+    color: rgba(255,255,255, .75);
+
+    .inner-wrapper {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .copyright {
+        text-transform: uppercase;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        padding: 0;
+        list-style: none;
+        margin: 0 -25px;
+
+        li {
+            padding: 0 25px;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
+
+    a {
+        font-size: 16px;
+        color: rgba(255,255,255, .75);
+
+        &:hover {
+            color: $white;
+        }
+    }
+}

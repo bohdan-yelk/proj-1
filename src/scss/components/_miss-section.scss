@@ -1,5 +1,6 @@
 .miss-section {
-    background-color: $gray;
+    padding: 0 0 200px;
+    background-color: $gray-100;
 
     h2 {
         font-weight: 400;
@@ -10,8 +11,87 @@
         }
     }
 
+    a {
+        color: $white;
+    }
+
     .title-wrapper,
     .slider-wrapper {
         width: 50%;
+    }
+
+    .title-wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .item {
+        position: relative;
+        
+        
+    }
+
+    .content-wrapper {
+        margin-right: 70px;
+        padding: 75px 75px 85px;
+        background-color: $gray;
+
+        a {
+            display: block;
+            width: 65%;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 36px;
+        }
+
+        p {
+            font-size: inherit;
+        }
+    }
+
+    .date-block {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        padding: 32px 33px;
+        background-color: $red;
+    }
+
+    time {
+        margin-bottom: 30px;
+    }
+
+    .slick {
+
+        &-arrow {
+            top: inherit;
+            bottom: 50px;
+            z-index: 10;
+            
+            &:before {
+                font-family: 'icomoon' !important;
+            }
+        }
+
+        &-prev {
+            left: 75px;
+            
+            &:before {
+                content: '\e902';
+            }
+        }
+
+        &-next {
+            right: inherit;
+            left: 123px;
+
+            &:before {
+                content: '\e901';
+            }
+        }
     }
 }
