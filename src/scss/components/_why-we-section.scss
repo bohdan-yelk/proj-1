@@ -10,7 +10,19 @@
 
         h2 {
             margin-left: -22.5%;
+
+            @include media('<=large') {
+                width: 30%;
+            }
         }
+
+        img {
+            @include media('<=large') {
+                width: 70%;
+            } 
+        }
+
+        
     }
 
     .content-wrapper {
@@ -61,6 +73,10 @@
             .content {
                 width: 40%;
                 padding-right: 105px;
+
+                @include media('<=widescreen') {
+                    padding-right: 50px;
+                }
             }
 
             .img-block {

@@ -11,6 +11,10 @@ body {
     width: 100%;
     max-width: 1600px;
     margin: 0 auto;
+
+    @include media('<=widescreen') {
+        padding: 0 20px;
+    }
 }
 
 .inner-wrapper {
@@ -55,6 +59,10 @@ h2 {
     font-size: 72px;
     font-weight: 800;
     color: $white;
+
+    @include media('<=large') {
+        font-size: 48px;
+    }
 
     span:not(.subtitle) {
         color: $red;

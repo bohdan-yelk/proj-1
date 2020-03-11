@@ -7,9 +7,7 @@
         position: relative;
     }
 
-    .slider-wrapper {
-        
-    }
+
 
     .title-wrapper {
         display: flex;
@@ -18,27 +16,79 @@
         margin-bottom: 60px;
     }
 
+    a {
+        margin-right: 30px;
+    }
+
     .news-slider {
         position: absolute;
         top: 145px;
         left: 0;
         right: -999px;
 
+        @include media('<=widescreen') {
+            left: 20px;
+        }
+    }
+
+    .item {
+        position: relative;
+    }
+
+    .content-wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0 100px;
+        color: $white;
+
+        time {
+            margin-bottom: 30px;
+            color: rgba(255,255,255, .5);
+        }
+
+        h3 {
+            width: 49%;
+            margin: 0 0 30px;
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 65px;
+            color: $white;
+            transition: color .3s ease;
+        }
     }
 
     .slick {
 
         &-track {
             margin: 0 -30px;
+
+            @include media('<=widescreen') {
+                margin: 0 -20px;
+            }   
         }
 
         &-slide {
-            margin: 0 30px;
+            padding: 0 30px;
+
+            @include media('<=widescreen') {
+                padding: 0 20px;
+            }
         }
 
         &-arrow {
             top: auto;
             bottom: -55px;
+
+            @include media('<=large') {
+                bottom: -65px;
+            }
         }
 
         &-prev {
@@ -55,7 +105,7 @@
         margin: 0;
     }
 
-    .progress {
+    .progress-wrapper {
         position: absolute;
         display: block;
         bottom: 50px;
@@ -63,9 +113,18 @@
         transform: translateX(-50%);
         width: 100%;
         max-width: 1600px;
-        height: 2px;
         margin-left: 90px;
-        overflow: hidden;
+
+        @include media('<=widescreen') {
+            left: 20px;
+            right: 20px;
+            transform: translateX(0);
+            width: auto;
+        }
+    }
+
+    .progress {
+        height: 2px;
         background-color: $gray;
         background-image: linear-gradient(to right, $red, $red);
         background-repeat: no-repeat;

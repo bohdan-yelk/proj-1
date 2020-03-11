@@ -14,9 +14,10 @@ $red: #CB0E10;
 
 
 $breakpoints: (
-  'phone': 320px,
+  'phone': 375px,
   'tablet': 768px,
   'desktop': 1024px,
-  'large': 1200px,
-  'widescreen': 1440px
+  'desktop-max': 1280px,
+  'large': 1440px,
+  'widescreen': 1600px
 );
