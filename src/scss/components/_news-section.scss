@@ -3,17 +3,30 @@
     min-height: 835px;
     background-color: $gray-100;
 
+    @include media('<=desktop') {
+        min-height: inherit;
+        padding: 0 0 60px;
+    }
+
     .container  {
         position: relative;
     }
-
-
 
     .title-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         margin-bottom: 60px;
+    }
+    
+    h2 {
+        span {
+            color: $white;
+
+            @include media('<tablet') {
+                display: none;
+            }
+        }
     }
 
     a {
@@ -29,10 +42,23 @@
         @include media('<=widescreen') {
             left: 20px;
         }
+
+        @include media('<=desktop') {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding-bottom: 60px;
+        }
     }
 
     .item {
         position: relative;
+
+        @include media('<=desktop') {
+            display: flex  !important;
+            flex-direction: column-reverse;
+        }
     }
 
     .content-wrapper {
@@ -48,6 +74,16 @@
         padding: 0 100px;
         color: $white;
 
+        @include media('<=desktop') {
+            padding: 0 40px;
+        }
+
+        @include media('<tablet') {
+            position: relative;
+            margin-top: 30px;
+            padding: 0;
+        }
+
         time {
             margin-bottom: 30px;
             color: rgba(255,255,255, .5);
@@ -61,6 +97,15 @@
             line-height: 65px;
             color: $white;
             transition: color .3s ease;
+
+            @include media('<=desktop') {
+                width: 95%;
+            }
+
+            @include media('<tablet') {
+                font-size: 24px;
+                line-height: 33px;
+            }
         }
     }
 
@@ -72,6 +117,10 @@
             @include media('<=widescreen') {
                 margin: 0 -20px;
             }   
+
+            @include media('<=desktop') {
+                margin: 0;
+            }
         }
 
         &-slide {
@@ -79,6 +128,17 @@
 
             @include media('<=widescreen') {
                 padding: 0 20px;
+            }
+
+            @include media('<=desktop') {
+                padding: 0;
+            }
+
+            img {
+                @include media('<=desktop') {
+                    display: block;
+                    margin: 0 auto;
+                }
             }
         }
 
@@ -88,6 +148,10 @@
 
             @include media('<=large') {
                 bottom: -65px;
+            }
+
+            @include media('<=desktop') {
+                bottom: 0;
             }
         }
 
@@ -120,6 +184,18 @@
             right: 20px;
             transform: translateX(0);
             width: auto;
+        }
+
+        @include media('<=desktop-max') {
+            bottom: 89px;
+        }
+
+        @include media('<=desktop') {
+            bottom: 17px;
+        }
+
+        @include media('<tablet') {
+            display: none;
         }
     }
 

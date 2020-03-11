@@ -3,10 +3,24 @@
     background-color: $gray-100;
     color: rgba(255,255,255, .75);
 
+    @include media('<=desktop-max') {
+        padding: 60px 0;
+    }
+
     .title-wrapper {
         display: flex;
         align-items: center;
         margin-bottom: 100px;
+
+        @include media('<=desktop') {
+            margin-bottom: 40px;
+        }
+
+        @include media('<tablet') {
+            flex-direction: column-reverse;
+            align-items: flex-start;
+        }
+        
 
         h2 {
             margin-left: -22.5%;
@@ -14,12 +28,21 @@
             @include media('<=large') {
                 width: 30%;
             }
+
+            @include media('<tablet') {
+                width: 100%;
+                margin: 0 0 40px;
+            }
         }
 
         img {
             @include media('<=large') {
                 width: 70%;
             } 
+
+            @include media('<tablet') {
+                width: 100%;
+            }
         }
 
         
@@ -36,8 +59,11 @@
             margin-bottom: 40px;
             font-size: 48px;
             font-weight: 700;
-            line-height: auto;
             color: $white;
+
+            @include media('<tablet') {
+                font-size: 40px;
+            }
 
             .subtitle {
                 display: block;
@@ -62,13 +88,39 @@
         padding: 0 80px;
         width: 53%;
 
+        @include media('<=desktop') {
+            padding: 0 20px;
+            width: 50%;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+            padding: 0;
+        }
+
         &:first-of-type {
             width: 43%;
+
+            @include media('<=desktop') {
+                width: 50%;
+            }
+
+            @include media('<tablet') {
+                width: 100%;
+            }
         }
 
         &-fluid {
             display: flex;
             width: 100%;
+
+            @include media('<=desktop') {
+                align-items: center;
+            }
+
+            @include media('<tablet') {
+                flex-direction: column;
+            }
 
             .content {
                 width: 40%;
@@ -77,11 +129,38 @@
                 @include media('<=widescreen') {
                     padding-right: 50px;
                 }
+
+                @include media('<=desktop') {
+                    width: 50%;
+                }
+
+                @include media('<tablet') {
+                    width: 100%;
+                    padding: 0;
+                }
+
+                p {
+                    @include media('<=desktop') {
+                        margin-bottom: 0;
+                    }
+
+                    @include media('<tablet') {
+                        margin-bottom: 30px;
+                    }
+                }
             }
 
             .img-block {
                 width: 60%;
                 background: radial-gradient(50% 50% at 50% 50%, #303030 0%, rgba(48, 48, 48, 0) 100%);
+
+                @include media('<=desktop') {
+                    width: 50%;
+                }
+
+                @include media('<tablet') {
+                    width: 100%;
+                }
             }
         }
     }

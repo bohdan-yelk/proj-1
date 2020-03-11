@@ -2,8 +2,23 @@
     padding: 0 0 200px;
     background-color: $gray-100;
 
+    @include media('<=desktop-max') {
+        padding: 0 0 60px;
+    }
+
+    .inner-wrapper {
+        @include media('<=desktop') {
+            flex-direction: column;
+        }
+    }
+
     h2 {
         font-weight: 400;
+
+        @include media('<tablet') {
+            margin: 0 0 40px;
+        }
+
         span {
             display: block;
             font-weight: 700;
@@ -18,6 +33,10 @@
     .title-wrapper,
     .slider-wrapper {
         width: 50%;
+
+        @include media('<=desktop') {
+            width: 100%;
+        }
     }
 
     .title-wrapper {
@@ -29,7 +48,10 @@
     .item {
         position: relative;
         
-        
+        @include media('<tablet') {
+            display: flex !important;
+            flex-direction: column-reverse;
+        }
     }
 
     .content-wrapper {
@@ -37,12 +59,21 @@
         padding: 75px 75px 85px;
         background-color: $gray;
 
+        @include media('<tablet') {
+            margin-right: 0;
+            padding: 30px 30px 85px;
+        }
+
         a {
             display: block;
             width: 65%;
             font-size: 24px;
             font-weight: bold;
             line-height: 36px;
+
+            @include media('<tablet') {
+                width: 100%;
+            }
         }
 
         p {
@@ -59,6 +90,13 @@
         flex-direction: column;
         padding: 32px 33px;
         background-color: $red;
+
+        @include media('<tablet') {
+            position: relative;
+            top: inherit;
+            right: inherit;
+            transform: translateY(0);
+        }
     }
 
     time {
@@ -79,6 +117,10 @@
 
         &-prev {
             left: 75px;
+
+            @include media('<tablet') {
+                left: 30px;
+            }
             
             &:before {
                 content: '\e902';
@@ -88,6 +130,10 @@
         &-next {
             right: inherit;
             left: 123px;
+
+            @include media('<tablet') {
+                left: 73px;
+            }
 
             &:before {
                 content: '\e901';

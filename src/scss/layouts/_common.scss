@@ -64,6 +64,10 @@ h2 {
         font-size: 48px;
     }
 
+    @include media('<tablet') {
+        font-size: 40px;
+    }
+
     span:not(.subtitle) {
         color: $red;
     }

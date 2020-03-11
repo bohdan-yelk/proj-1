@@ -32,6 +32,10 @@
             text-align: center;
         }
 
+        @include media('<tablet') {
+            text-align: left;
+        }
+
         span {
             display: block;
             width: 90%;
@@ -51,6 +55,11 @@
                 width: auto;
             }
 
+            @include media('<tablet') {
+                font-size: 64px;
+                line-height: 87px;
+            }
+
             &.top {
                 margin-bottom: 60px;
                 font-size: 24px;
@@ -65,6 +74,10 @@
                     width: 100%;
                     font-size: 18px;
                     line-height: 36px;
+                }
+
+                @include media('<tablet') {
+                    margin-bottom: 30px;
                 }
             }
         }
@@ -111,6 +124,10 @@
                 padding: 0 40px;
             }
 
+            @include media('<=phone') {
+                padding: 0 20px;
+            }
+
             &:hover {
                 h2, p {
                     color: rgba(255,255,255, .5);
@@ -137,6 +154,15 @@
                 font-size: 40px;
             }
 
+            @include media('<tablet') {
+                width: 100%;
+            }
+
+            @include media('<=phone') {
+                font-size: 32px;
+                line-height: 44px;
+            }
+
             span {
                 position: relative;
                 display: block;
@@ -145,6 +171,10 @@
                 font-size: 16px;
                 font-weight: 300;
                 color: rgba(255,255,255, .5);
+
+                @include media('<tablet') {
+                    display: none;
+                }
 
                 &:before {
                     position: absolute;
@@ -167,6 +197,10 @@
 
             @include media('<=desktop-max') {
                 margin: 0;
+            }
+
+            @include media('<tablet') {
+                display: none;
             }
         }
     }
@@ -217,6 +251,10 @@
         display: flex;
         background-color: $gray;
 
+        @include media('<tablet') {
+            overflow-x: scroll;
+        }
+
         li {
             width: auto;
             height: auto;
@@ -228,6 +266,12 @@
             @include media('<=desktop-max') {
                 flex: 1;
                 padding: 19px 20px;
+            }
+
+            @include media('<tablet') {
+                flex-shrink: 0;
+                flex-grow: 0;
+                white-space: nowrap;
             }
 
             &.slick-active,

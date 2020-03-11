@@ -54,10 +54,17 @@ import { log } from './utils'
   })
 
   $('#news-slider').slick({
-    // infinite: false,
     dots: false,
     arrows: true,
-    slidesToShow: 2
+    slidesToShow: 2,
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   })
 
 

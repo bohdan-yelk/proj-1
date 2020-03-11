@@ -5,11 +5,31 @@
     .inner-wrapper  {
         justify-content: space-between;
         align-items: center;
+
+        @include media('<=desktop-max') {
+            align-items: flex-start;
+        }
+
+        @include media('<tablet') {
+            flex-direction: column;
+        }
     }
 
     .col {
         display: flex;
         align-items: center;
+
+        @include media('<=desktop-max') {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-bottom: 60px;
+        }
+
+        &:last-child {
+            @include media('<=desktop-max') {
+                margin-bottom: 0;
+            }
+        }
     }
 
     h3 {
@@ -17,15 +37,37 @@
         font-size: 32px;
         font-weight: bold;
         line-height: 44px;
+
+        @include media('<=desktop-max') {
+            margin-bottom: 30px;
+        }
+
+        @include media('<tablet') {
+            font-size: 24px;
+            line-height: 33px;
+        }
     }
 
     form {
         margin-left: 60px;
+
+        @include media('<=desktop-max') {
+            margin-left: 0;
+        }
     }
 
     input[type="text"] {
         min-width: 250px;
         margin-right: 20px;
+
+        @include media('<tablet') {
+            min-width: 190px;
+        }
+
+        @include media('<phone') {
+           width: 100%;
+           margin-bottom: 20px;
+        }
     }
 
     ul {
@@ -34,6 +76,10 @@
         font-size: 50px;
         margin: 0 -15px;
         padding: 0 0 0 40px;
+
+        @include media('<=desktop-max') {
+            padding-left: 0;
+        }
 
         li {
             padding: 0 15px;

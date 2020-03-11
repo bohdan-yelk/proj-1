@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
-    <title>Home</title>
-  <link href="./css/libs.css?a15e00ba4b09617999d2" rel="stylesheet"><link href="./css/app.css?a15e00ba4b09617999d2" rel="stylesheet"></head>
-  <body>
-    <div id="wrapper">
-      <header id="header">
-        <div class="container">
-         <div class="inner-wrapper">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+  <title>Home</title>
+  <link href="./css/libs.css?3dff3f8dc50139204c07" rel="stylesheet">
+  <link href="./css/app.css?3dff3f8dc50139204c07" rel="stylesheet">
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <div class="container">
+        <div class="inner-wrapper">
           <div class="logo-wrapper">
             <a href="#">
               <img src="images/logo.png" alt="ThermoFlexx">
@@ -20,12 +24,24 @@
           </div>
           <nav id="nav">
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">About ThermoFlexX</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href="#">Download Area</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li class="active">
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Products</a>
+              </li>
+              <li>
+                <a href="#">About ThermoFlexX</a>
+              </li>
+              <li>
+                <a href="#">News</a>
+              </li>
+              <li>
+                <a href="#">Download Area</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
             </ul>
           </nav>
           <div class="burger">
@@ -33,12 +49,13 @@
             <div class="burger-brick middle"></div>
             <div class="burger-brick"></div>
           </div>
-         </div>
         </div>
-      </header>
-      <main id="main">
-        <section class="main-section" style="background-image: url(images/vector.png);">
-          <div class="container">
+      </div>
+    </header>
+    <main id="main">
+      <section class="main-section" style="background-image: url(images/vector.png);">
+        <div class="container">
+          <div class="inner-wrapper">
             <h1>
               <span class="top">Integrated plate production for flexo and letterpress.</span>
               <span>Superb.</span>
@@ -46,22 +63,247 @@
               <span>Open.</span>
             </h1>
             <div class="slider-wrapper">
-              <div class="main-slider">
-                <div class="item">
-                  <video src="media/TFX_Catena-E80_190923a_1080p.mp4">
-                    <!-- <source src="media/TFX_Catena-E80_190923a_1080p.mp4" type="TFX_Catena-E80_190923a_1080p/mp4"> -->
-                    <!-- <source src="media/TFX_Catena-E80_190923a_1080p.webm" type="TFX_Catena-E80_190923a_1080p/webm"> -->
+              <div class="content-wrapper">
+                <a href="#">
+                  <h2>
+                    <span class="subtitle">Products</span>
+                    ThermoFlexX Catena-E 80
+                  </h2>
+                  <p>The imager for high-volume flexo plate making.</p>
+                </a>
+              </div>
+              <div class="main-slider" id="mainSlider">
+                <div class="item" data-title="ThermoFlexX Imagers">
+                  <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
+                    <source src="https://www.kj.com/sites/default/files/video/530262769.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item" data-title="Catena Plate Processors">
+                  <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
+                    <source src="https://www.kj.com/sites/default/files/video/530262769.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div class="item" data-title="Woodpecker Screenings">
+                  <video autoplay="autoplay" loop="loop" muted="muted" preload="auto">
+                    <source src="https://www.kj.com/sites/default/files/video/530262769.mp4" type="video/mp4">
                   </video>
                 </div>
               </div>
             </div>
           </div>
-        </section>
-      </main>
-      <footer id="footer">
-  
-      </footer>
-    </div>
-    
-  <script type="text/javascript" src="./js/libs.js?a15e00ba4b09617999d2"></script><script type="text/javascript" src="./js/app.js?a15e00ba4b09617999d2"></script></body>
+        </div>
+      </section>
+      <section class="why-we-section">
+        <div class="container">
+          <div class="title-wrapper">
+            <img src="images/why-we.png" alt="image description">
+            <h2>
+              Why
+              <br>
+              ThermoFlex<span>X</span>
+            </h2>
+          </div>
+          <div class="content-wrapper">
+            <div class="col">
+              <h3>Customer Awareness</h3>
+              <p>Xeikon prides itself on the close relationships it has built with its customers. All the
+                solutions offered by the company are developed to solve specific customer challenges.
+                The company maintains its “customer awareness” by being open and approachable at all the
+                levels of the organization.</p>
+              <h3>Experience</h3>
+              <p>Printers and prepress tradeshops can depend on Xeikon Prepress for experience and
+                know-how. As a renowned innovator in the printing industry for more than 20 years, the
+                company has been offering CtP solutions for the Newspaper, Commercial & Screenprinting
+                Industry.</p>
+            </div>
+            <div class="col">
+              <p>ThermoFlexX is a brand name of unique solution offering for the packaging industry
+                focussing on quality, productivity and automation. The TFxX imagers excel in their
+                seamless plate handling offering a path to fully automated plate production, our
+                Woodpecker Nano Surface Screening delivers a second to none high Solid Ink Density, ....
+              </p>
+              <p>Grow your business with ThermoFlexX TFxX imagers. Our flexible product offering is
+                designed to meet your business requirements and provide innovative features and
+                functionality, for you to differentiate and excel in what you do.</p>
+              <a href="#" class="btn more">Read More</a>
+            </div>
+            <div class="col col-fluid">
+              <div class="content">
+                <h2>
+                  <span class="subtitle">Digital imaging for flexo and letterpress</span>
+                  Get
+                  <span>5080</span>
+                  dpi with unseen quality and productivity
+                </h2>
+                <p>Producing tags, labels, flexible packaging, folding carton or corrugated packaging?
+                  ThermoFlexX imagers can do it all. Better even. Our wide range of platemaking
+                  systems allows you to keep up with the increasing demand for flexibility.</p>
+              </div>
+              <div class="img-block">
+                <img src="images/TFX80_drum_01 1.png" alt="TFX80_drum_01-1">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="miss-section">
+        <div class="container">
+          <div class="inner-wrapper">
+            <div class="title-wrapper">
+              <h2>
+                What you
+                <span>shouldn't miss</span>
+              </h2>
+            </div>
+            <div class="slider-wrapper">
+              <div class="miss-slider" id="miss-slider">
+                <div class="item">
+                  <div class="content-wrapper">
+                    <a href="#">
+                      <p>Flint Group Packaging Expands its ThermoFlexX brand at Labelexpo Europe
+                        2019</p>
+                    </a>
+                  </div>
+                  <div class="date-block">
+                    <time>26 Nov 2019</time>
+                    <address class="address">Kharkiv, Ukraine</address>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content-wrapper">
+                    <a href="#">
+                      <p>Flint Group Packaging Expands its ThermoFlexX brand at Labelexpo Europe
+                        2019</p>
+                    </a>
+                  </div>
+                  <div class="date-block">
+                    <time>26 Nov 2019</time>
+                    <address class="address">Kharkiv, Ukraine</address>
+                  </div>
+                </div>
+                <div class="item">
+                  <div class="content-wrapper">
+                    <a href="#">
+                      <p>Flint Group Packaging Expands its ThermoFlexX brand at Labelexpo Europe
+                        2019</p>
+                    </a>
+                  </div>
+                  <div class="date-block">
+                    <time>26 Nov 2019</time>
+                    <address class="address">Kharkiv, Ukraine</address>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="news-section">
+        <div class="container">
+          <div class="title-wrapper">
+            <h2><span>Latest</span> News</h2>
+            <a href="#" class="btn more">All News</a>
+          </div>
+          <div class="slider-wrapper">
+            <div class="news-slider" id="news-slider">
+              <div class="item">
+                <div class="content-wrapper">
+                  <time>26 November 2019</time>
+                  <h3>ThermoFlexX at LabelExpo Asia 2019, 3 - 6 December</h3>
+                  <a href="#" class="btn more">Read More</a>
+                </div>
+                <img src="images/news-slide-1.png" alt="image description">
+              </div>
+              <div class="item">
+                <div class="content-wrapper">
+                  <time>26 November 2019</time>
+                  <h3>ThermoFlexX at LabelExpo Asia 2019, 3 - 6 December</h3>
+                  <a href="#" class="btn more">Read More</a>
+                </div>
+                <img src="images/news-slide-1.png" alt="image description">
+              </div>
+              <div class="item">
+                <div class="content-wrapper">
+                  <time>26 November 2019</time>
+                  <h3>ThermoFlexX at LabelExpo Asia 2019, 3 - 6 December</h3>
+                  <a href="#" class="btn more">Read More</a>
+                </div>
+                <img src="images/news-slide-1.png" alt="image description">
+              </div>
+              <div class="item">
+                <div class="content-wrapper">
+                  <time>26 November 2019</time>
+                  <h3>ThermoFlexX at LabelExpo Asia 2019, 3 - 6 December</h3>
+                  <a href="#" class="btn more">Read More</a>
+                </div>
+                <img src="images/news-slide-1.png" alt="image description">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="progress-wrapper">
+          <div class="progress" role="progressbar" aria-valuemin="" aria-valuemax="100"></div>
+        </div>
+      </section>
+      <section class="follow-section">
+        <div class="container">
+          <div class="inner-wrapper">
+            <div class="col">
+              <h3>Get in touch</h3>
+              <form>
+                <input type="text" placeholder="Your email">
+                <button class="subscribe">Subscribe</button>
+              </form>
+            </div>
+            <div class="col">
+              <h3>Follow us:</h3>
+              <ul>
+                <li>
+                  <a href="#">
+                    <i class="icon-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-linkedin"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class="icon-youtube-with-circle"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="footer">
+      <div class="container">
+        <div class="inner-wrapper">
+          <div class="copyright">
+            <p>Copyright &copy; 2012 Xeikon Nv. All rights reserved.</p>
+          </div>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of Use</a>
+              </li>
+              <li>
+                <a href="#">General Purchasing Conditions</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="./js/libs.js?3dff3f8dc50139204c07"></script>
+  <script type="text/javascript" src="./js/app.js?3dff3f8dc50139204c07"></script>
+</body>
+
 </html>
