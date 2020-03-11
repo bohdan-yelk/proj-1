@@ -66,8 +66,6 @@ import { log } from './utils'
       }
     ]
   })
-
-
   });
 
   /* --------  Apply global listeners  -------- */

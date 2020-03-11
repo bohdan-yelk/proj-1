@@ -12,6 +12,10 @@
     }
 
     .inner-wrapper {
+
+        @include media('<=widescreen') {
+            justify-content: space-between;
+        }
         @include media('<=desktop') {
             flex-direction: column;
         }
