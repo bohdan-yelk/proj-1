@@ -253,6 +253,11 @@
         @include media('<desktop-max') {
             bottom: 65px;
             margin-left: 75px;
+            width: auto;
+            max-width: inherit;
+            left: 50px;
+            right: 50px;
+            transform: translateX(0);
         }
 
         @include media('<=desktop') {
