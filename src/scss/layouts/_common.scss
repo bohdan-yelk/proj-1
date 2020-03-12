@@ -13,7 +13,8 @@ body {
     margin: 0 auto;
 
     @include media('<=widescreen') {
-        padding: 0 64px;
+        padding: 0 120px;
+        max-width: 1200px;
     }
     
     @include media('<=desktop-max') {
