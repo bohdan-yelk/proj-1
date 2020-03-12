@@ -27,6 +27,11 @@
     a {
         color: $white;
 
+        @include media('<tablet') {
+            display: flex;
+            align-items: center;
+        }
+
         &:hover {
             color: rgba(255,255,255, .5);
         }
