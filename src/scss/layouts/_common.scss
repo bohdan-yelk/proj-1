@@ -63,7 +63,8 @@ address {
     }
 }
 
-h2 {
+h2,
+.h2 {
     font-size: 72px;
     font-weight: 800;
     color: $white;
@@ -75,6 +76,7 @@ h2 {
 
     @include media('<=desktop') {
         font-size: 48px;
+        line-height: 54px;
     }
 
     @include media('<tablet') {
@@ -102,6 +104,7 @@ textarea {
     border: none;
     border-bottom: 1px solid $white;
     background-color: transparent;
+    border-radius: 0;
     outline: none;
 
     &::placeholder {

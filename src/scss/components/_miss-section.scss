@@ -1,9 +1,13 @@
 .miss-section {
-    padding: 0 0 200px;
+    padding: 100px 0 100px;
     background-color: $gray-100;
 
     @include media('<=widescreen') {
-        padding: 0 0 150px;
+        padding: 75px 0 75px;
+    }
+
+    @include media('<desktop-max') {
+        padding: 30px 0 30px;
     }
 
     @include media('<=desktop') {
@@ -18,6 +22,10 @@
 
     h2 {
         font-weight: 400;
+
+        @include media('<=desktop') {
+            margin-top: 0;
+        }
 
         @include media('<tablet') {
             margin: 0 0 40px;
@@ -65,7 +73,7 @@
 
     .content-wrapper {
         margin-right: 70px;
-        padding: 75px 75px 85px;
+        padding: 75px 75px 105px;
         background-color: $gray;
 
         @include media('<=widescreen') {
@@ -167,7 +175,11 @@
 
         &-next {
             right: inherit;
-            left: 75px;
+            left: 115px;
+
+            @include media('<=widescreen') {
+                left: 80px;
+            }
 
             @include media('<tablet') {
                 left: 73px;

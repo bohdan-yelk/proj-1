@@ -1,10 +1,17 @@
 .news-section {
     position: relative;
-    min-height: 835px;
+    min-height: 1050px;
+    padding: 100px 0 100px;
     background-color: $gray-100;
 
     @include media('<=widescreen') {
-        min-height: 732px;
+        min-height: 873px;
+        padding: 75px 0 150px;
+    }
+
+    @include media('<desktop-max') {
+        min-height: 790px;
+        padding: 30px 0 30px;
     }
 
     @include media('<=desktop') {
@@ -21,6 +28,10 @@
         justify-content: space-between;
         align-items: flex-end;
         padding-bottom: 60px;
+
+        @include media('<desktop-max') {
+            padding-bottom: 40px;
+        }
     }
     
     h2 {
@@ -34,7 +45,20 @@
     }
 
     a {
-        margin: 0 30px 10px 0;
+        margin: 0 30px 5px 0;
+
+        @include media('<desktop-max') {
+            margin: 0 30px 10px 0;
+        }
+
+        @include media('<=desktop') {
+            margin: 0 30px 0 0;
+            line-height: 26px;
+        }
+
+        @include media('<tablet') {
+            margin: 0 30px 5px 0;
+        }
     }
 
     .news-slider {
@@ -44,6 +68,7 @@
         right: -999px;
 
         @include media('<desktop-max') {
+            top: 125px;
             left: 50px;
         }
 
@@ -203,28 +228,31 @@
     .progress-wrapper {
         position: absolute;
         display: block;
-        bottom: 50px;
+        bottom: 165px;
         left: 50%;
         transform: translateX(-50%);
         width: 100%;
-        max-width: 1600px;
-        margin-left: 120px;
+        max-width: 1510px;
+        margin-left: 40px;
 
         @include media('<=widescreen') {
-            left: 20px;
-            right: 20px;
-            transform: translateX(0);
+            left: 50%;
+            transform: translateX(-50%);
+            margin-left: 50px;
             width: auto;
-            bottom: 61px;
+            bottom: 155px;
+            max-width: 1100px;
+            width: 100%;
         }
 
         @include media('<=desktop-max') {
-            bottom: 89px;
+            bottom: 155px;
         }
 
+
         @include media('<desktop-max') {
-            bottom: 17px;
-            margin-left: 150px;
+            bottom: 65px;
+            margin-left: 75px;
         }
 
         @include media('<=desktop') {
