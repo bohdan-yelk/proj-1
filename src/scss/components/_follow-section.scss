@@ -2,6 +2,10 @@
     padding: 75px 0;
     background-color: $red;
 
+    @include media('<=widescreen') {
+        padding: 50px 0;
+    }
+
     .inner-wrapper  {
         justify-content: space-between;
         align-items: center;
@@ -11,7 +15,8 @@
         }
 
         @include media('<tablet') {
-            flex-direction: column;
+            // flex-direction: column;
+            flex-wrap: wrap;
         }
     }
 
@@ -19,14 +24,23 @@
         display: flex;
         align-items: center;
 
-        @include media('<=desktop-max') {
+        @include media('<desktop-max') {
             flex-direction: column;
             align-items: flex-start;
+        }
+
+        @include media('<550px') {
             margin-bottom: 60px;
         }
 
+        &:first-child {
+            @include media('<550px') {
+                margin-right: 20px;
+            }
+        }
+
         &:last-child {
-            @include media('<=desktop-max') {
+            @include media('<=desktop') {
                 margin-bottom: 0;
             }
         }
@@ -54,6 +68,12 @@
         @include media('<=desktop-max') {
             margin-left: 0;
         }
+
+        @include media('<desktop-max') {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
 
     input[type="text"] {
@@ -64,7 +84,7 @@
             min-width: 190px;
         }
 
-        @include media('<phone') {
+        @include media('<desktop-max') {
            width: 100%;
            margin-bottom: 20px;
         }

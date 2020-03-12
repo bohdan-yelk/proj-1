@@ -13,15 +13,14 @@ body {
     margin: 0 auto;
 
     @include media('<=widescreen') {
-        padding: 0 120px;
         max-width: 1200px;
     }
-    
-    @include media('<=desktop-max') {
-        padding: 0 20px;
+
+    @include media('<desktop-max') {
+        padding: 0 50px;
     }
 
-    @include media('<=desktop') {
+    @include media('<tablet') {
         padding: 0 20px;
     }
 }
@@ -38,7 +37,7 @@ address {
     font-style: normal;
 }
 
-time,
+.time,
 .address {
     position: relative;
     padding-left: 35px;
@@ -69,7 +68,12 @@ h2 {
     font-weight: 800;
     color: $white;
 
-    @include media('<=large') {
+    @include media('<=widescreen') {
+        font-size: 64px;
+        line-height: 87px;
+    }
+
+    @include media('<=desktop') {
         font-size: 48px;
     }
 
@@ -106,7 +110,8 @@ textarea {
 }
 
 a,
-button {
+button,
+span {
     text-decoration: none;
 
     &.more,

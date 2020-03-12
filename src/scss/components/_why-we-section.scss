@@ -3,8 +3,8 @@
     background-color: $gray-100;
     color: rgba(255,255,255, .75);
 
-    @include media('<=desktop-max') {
-        padding: 60px 0;
+    @include media('<=widescreen') {
+        padding: 60px 0 90px;
     }
 
     .title-wrapper {
@@ -38,8 +38,8 @@
         }
 
         img {
-            @include media('<=large') {
-                width: 70%;
+            @include media('<=widescreen') {
+                width: 75%;
             } 
 
             @include media('<tablet') {
@@ -79,6 +79,11 @@
             margin: 0 0 40px;
             font-weight: 700;
             color: $white;
+
+            @include media('<=widescreen') {
+                font-size: 24px;
+                line-height: 33px;
+            }
         }
 
         p {
@@ -89,6 +94,10 @@
     .col {
         padding: 0 80px;
         width: 53%;
+
+        @include media('<=widescreen') {
+            padding: 0 50px 0 0;
+        }
 
         @include media('<=desktop') {
             padding: 0 20px;
@@ -129,16 +138,29 @@
                 padding-right: 105px;
 
                 @include media('<=widescreen') {
-                    padding-right: 50px;
-                }
-
-                @include media('<=desktop') {
                     width: 50%;
+                    padding-right: 50px;
                 }
 
                 @include media('<tablet') {
                     width: 100%;
                     padding: 0;
+                }
+
+                h2 {
+                    font-size: 48px;
+                    line-height: 65px;
+
+                    @include media('<=phone') {
+                        font-size: 40px;
+                        line-height: 54px;
+                    }
+
+                    .subtitle {
+                        margin-bottom: 20px;
+                        font-size: 24px;
+                        line-height: 36px;
+                    }
                 }
 
                 p {
@@ -156,7 +178,7 @@
                 width: 60%;
                 background: radial-gradient(50% 50% at 50% 50%, #303030 0%, rgba(48, 48, 48, 0) 100%);
 
-                @include media('<=desktop') {
+                @include media('<=widescreen') {
                     width: 50%;
                 }
 
