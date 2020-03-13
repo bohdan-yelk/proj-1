@@ -63,6 +63,10 @@ address {
     }
 }
 
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
 h2,
 .h2 {
     font-size: 72px;
@@ -179,6 +183,127 @@ p {
             color: $white;
             border-radius: 50%;
             background-color: $red;
+        }
+    }
+}
+
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    margin: 0 -23px;
+    padding: 60px 0;
+    list-style: none;
+
+    li {
+        position: relative;
+        padding: 0 23px;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: rgba(255,255,255, .5);
+        }
+
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+
+        &.disable {
+            a {
+                pointer-events: none;
+                color: rgba(255,255,255, .25);
+            }
+        }
+
+        a {
+            color: rgba(255,255,255, .5);
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    font-size: 18px;
+    line-height: 36px;
+    background-color: $gray;
+    
+    picture {
+        padding-right: 100px;
+    }
+
+    .description {
+        width: 32%;
+    }
+
+    h3 {
+        margin: 0 0 30px;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 44px;
+    }
+
+    .details {
+        margin: 0 auto;
+        padding: 0;
+        list-style: none;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 22px;
+
+        li {
+            &:first-of-type {
+                margin-bottom: 40px;
+                span {
+                    &:before {
+                        content: '\e90a';
+                    }
+                }
+            }
+
+            &:last-of-type {
+                span {
+                    &:before {
+                        content: '\e909';
+                    }
+                }
+            }
+        }
+
+        span {
+            position: relative;
+            margin-bottom: 10px;
+            padding: 0 0 0 40px;
+            font-size: 16px;
+            font-weight: normal;
+            color: rgba(255,255,255, .75);
+
+            &:before {
+                position: absolute; 
+                content: '';
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                font-family: 'icomoon';
+                font-size: 24px;
+            }
+        }
+
+        p {
+            padding-left: 40px;
         }
     }
 }
