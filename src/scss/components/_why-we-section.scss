@@ -11,8 +11,12 @@
         padding: 75px 0 30px;
     }
 
+    @include media('<=desktop') {
+        padding: 90px 0 50px;
+    }
+
     @include media('<tablet') {
-        padding: 50px 0 30px;
+        padding: 60px 0 30px;
     }
 
     .title-wrapper {
@@ -126,7 +130,7 @@
 
         @include media('<=desktop') {
             width: 50%;
-            padding: 0 15px 0 0;
+            padding: 0 20px 0 0;
         }
 
         @include media('<tablet') {
@@ -148,6 +152,11 @@
         &-fluid {
             display: flex;
             width: 100%;
+            padding-top: 100px;
+
+            @include media('<=desktop-max') {
+                padding-top: 90px;
+            }
 
             @include media('<=desktop') {
                 align-items: center;
@@ -183,7 +192,7 @@
                     line-height: 65px;
 
                     @include media('<=desktop-max') {
-                        margin-top: 20px;
+                        margin-top: 0px;
                     }
 
                     @include media('<=tablet') {
