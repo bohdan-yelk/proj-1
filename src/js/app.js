@@ -57,11 +57,20 @@ import { log } from './utils'
     dots: false,
     arrows: true,
     slidesToShow: 2,
+    variableWidth: true,
+    swipeToSlide: true,
     responsive: [
+      {
+        breakpoint: 1280,
+        settings: {
+          variableWidth: false
+        }
+      },
       {
         breakpoint: 1025,
         settings: {
-          slidesToShow: 1
+          slidesToShow: 1,
+          variableWidth: false
         }
       }
     ]
