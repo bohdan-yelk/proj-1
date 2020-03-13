@@ -161,9 +161,15 @@
             @include media('<=desktop') {
                 align-items: center;
             }
+            
 
             @include media('<=tablet') {
                 flex-direction: column-reverse;
+                padding-top: 60px;
+            }
+
+            @include media('<tablet') {
+                padding-top: 0;
             }
 
             .content {
@@ -202,6 +208,7 @@
 
                     @include media('<tablet') {
                         width: 100%;
+                        font-size: 40px;
                         margin-bottom: 30px;
                     }
 

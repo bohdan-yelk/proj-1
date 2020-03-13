@@ -129,6 +129,11 @@
         .time {
             margin-bottom: 30px;
             color: rgba(255,255,255, .5);
+
+            @include media('<tablet') {
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
         }
 
         h3 {
