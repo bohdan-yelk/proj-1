@@ -1,11 +1,30 @@
 .product-list-section {
+    padding: 150px 0 0;
 
-
-    h3 {
-        width: 35%;
+    &.last {
+        padding: 150px 0;
     }
 
-    p {
-        width: 75%;
+    .title {
+        display: flex;
+        align-items: center;
+        padding: 0 0 64px;
+        font-size: 16px;
+        line-height: 36px;
+
+        h3 {
+            width: 34%;
+            margin: 0;
+            font-size: 48px;
+            font-weight: bold;
+            line-height: 65px;
+        }
+    
+        p {
+            width: 33%;
+            margin: 0 0 0 8.59%;
+        }
     }
+
+    
 }
