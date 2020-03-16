@@ -64,7 +64,12 @@ address {
     }
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -195,6 +200,10 @@ p {
     padding: 61px 0 60px;
     list-style: none;
 
+    @include media('<=desktop') {
+        padding: 30px 0 20px;
+    }
+
     li {
         position: relative;
         padding: 0 26px;
@@ -208,7 +217,7 @@ p {
             width: 4px;
             height: 4px;
             border-radius: 50%;
-            background-color: rgba(255,255,255, .5);
+            background-color: rgba(255, 255, 255, .5);
         }
 
         &:first-child {
@@ -220,12 +229,12 @@ p {
         &.disable {
             a {
                 pointer-events: none;
-                color: rgba(255,255,255, .25);
+                color: rgba(255, 255, 255, .25);
             }
         }
 
         a {
-            color: rgba(255,255,255, .5);
+            color: rgba(255, 255, 255, .5);
 
             &:hover {
                 color: $white;
@@ -241,18 +250,69 @@ p {
     font-size: 18px;
     line-height: 36px;
     background-color: $gray;
-    
+
+    @include media('<=desktop-max') {
+        padding: 30px;
+    }
+
+    @include media('<desktop') {
+        flex-direction: column;
+        width: 30%;
+        margin: 0 15px;
+    }
+
+    @include media('<=tablet') {
+        width: 45%;
+    }
+
+    @include media('<tablet') {
+        width: 100%;
+    }
+
     picture {
         padding-right: 100px;
+
+        @include media('<=large') {
+            padding-right: 30px;
+            width: 30%;
+        }
+
+        @include media('<desktop') {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        @include media('<tablet') {
+            margin-bottom: 20px;
+        }
+
+        img {
+            @include media('<tablet') {
+                display: block;
+                margin: 0 auto;
+            }
+        }
     }
 
     .description {
         width: 35%;
-        
-        
+
+        @include media('<=large') {
+            margin: 0 auto;
+        }
+
+        @include media('<desktop') {
+            width: 100%;
+        }
+
         p {
             margin: 0 0 10px;
             font-size: 18px;
+
+            @include media('<=desktop') {
+                font-size: 16px;
+                line-height: 32px;
+            }
         }
     }
 
@@ -262,11 +322,22 @@ p {
         font-weight: bold;
         line-height: 44px;
 
+        @include media('<=desktop') {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        @include media('<tablet') {
+            margin: 0 0 20px;
+            font-size: 32px;
+            line-height: 44px;
+        }
+
         a {
             color: $white;
 
             &:hover {
-                color: rgba(255,255,255, .5);
+                color: rgba(255, 255, 255, .5);
             }
         }
     }
@@ -279,9 +350,18 @@ p {
         font-weight: bold;
         line-height: 22px;
 
+        @include media('<=large') {
+            margin: -10px 0 0 auto;
+        }
+
+        @include media('<desktop') {
+            display: none;
+        }
+
         li {
             &:first-of-type {
                 margin-bottom: 41px;
+
                 span {
                     &:before {
                         content: '\e90a';
@@ -304,10 +384,10 @@ p {
             padding: 0 0 0 40px;
             font-size: 16px;
             font-weight: normal;
-            color: rgba(255,255,255, .75);
+            color: rgba(255, 255, 255, .75);
 
             &:before {
-                position: absolute; 
+                position: absolute;
                 content: '';
                 top: 50%;
                 left: 0;

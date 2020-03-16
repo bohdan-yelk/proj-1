@@ -7,6 +7,22 @@
 
     .card {
         margin-bottom: 30px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+            
+            @include media('<desktop') {
+                margin-bottom: 30px;
+            }
+
+            @include media('<=tablet') {
+                margin-bottom: 20px;
+            }
+        }
+
+        @include media('<=tablet') {
+            margin-bottom: 20px;
+        }
     }
 
 }

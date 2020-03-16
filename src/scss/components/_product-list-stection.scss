@@ -1,8 +1,24 @@
 .product-list-section {
     padding: 150px 0 0;
 
+    @include media('<=desktop-max') {
+        padding: 60px 0 0;
+    }
+
+    @include media('<=tablet') {
+        padding: 30px 0 0;
+    }
+
     &.last {
         padding: 150px 0;
+
+        @include media('<=desktop-max') {
+            padding: 60px 0 100px;
+        }
+
+        @include media('<=tablet') {
+            padding: 30px 0 40px;
+        }
     }
 
     .title {
@@ -12,19 +28,64 @@
         font-size: 16px;
         line-height: 36px;
 
+        @include media('<=desktop-max') {
+            padding: 0 0 60px;
+        }
+
+        @include media('<=tablet') {
+            flex-direction: column;
+            padding: 0 0 40px;
+        }
+
         h3 {
             width: 34%;
             margin: 0;
             font-size: 48px;
             font-weight: bold;
             line-height: 65px;
+
+            @include media('<=desktop-max') {
+                font-size: 40px;
+                line-height: 54px;
+            }
+
+            @include media('<=desktop') {
+                width: 50%;
+            }
+
+            @include media('<=tablet') {
+                width: 100%;
+                margin-bottom: 30px;
+            }
         }
     
         p {
             width: 33%;
             margin: 0 0 0 8.59%;
+
+            @include media('<=desktop-max') {
+                width: 65%;
+            }
+
+            @include media('<=desktop') {
+                width: 50%;
+                margin: 0 0 0 30px;
+            }
+
+            @include media('<=tablet') {
+                width: 100%;
+                margin: 0;
+            }
         }
     }
 
-    
+    .cards-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include media('<desktop') {
+            justify-content: center;
+            margin: 0 -15px;
+        }
+    }
 }
