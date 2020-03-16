@@ -1,0 +1,12 @@
+.about-us {
+    background-color: $gray-100;
+    background-image: url('/images/about-us-bg.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    .h1 {
+        margin: 0;
+        padding: 67px 0 9px;
+    }
+}
