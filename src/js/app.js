@@ -19,9 +19,13 @@ import { log } from './utils'
 
   $(document).ready(function() {
 
+  // mobile menu
+
   $(".burger").click(function() {
     $('#header').toggleClass("active")
   })
+
+  //main slider
 
   $('#mainSlider').slick({
     infinite: true,
@@ -75,6 +79,17 @@ import { log } from './utils'
       }
     ]
   })
+
+  // anchor links 
+  
+  $(document).on('click', '.category-link', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top
+    }, 1000);
+});
+
   });
 
   /* --------  Apply global listeners  -------- */
