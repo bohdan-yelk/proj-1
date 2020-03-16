@@ -5,8 +5,16 @@
     background-repeat: no-repeat;
     background-position: top center;
 
+    @include media('<=widescreen') {
+        background-size: inherit;
+    }
+
     .h1 {
         margin: 0;
         padding: 67px 0 9px;
+
+        @include media('<=widescreen') {
+            padding: 0;
+        }
     }
 }
