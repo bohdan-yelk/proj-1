@@ -34,9 +34,11 @@ body {
 @import './components/product-list-stection';
 @import './components/about-section';
 @import './components/news-list-section';
+@import './components/article-section';
 
 // Import pages
 @import './pages/home';
 @import './pages/categories';
 @import './pages/about-us';
 @import './pages/news';
+@import './pages/article';
