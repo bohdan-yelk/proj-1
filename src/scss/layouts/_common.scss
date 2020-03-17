@@ -408,9 +408,18 @@ p {
 }
 
 .card-news {
+    @include media('<tablet') {
+        display: flex;
+        flex-direction: column;
+    }
+
     picture {
         display: block;
         margin-bottom: 33px;
+        
+        @include media('<=desktop-max') {
+            margin-bottom: 20px;
+        }
     }
 
     .time {
@@ -419,6 +428,11 @@ p {
         font-size: 16px;
         line-height: 32px;
         color: rgba(255,255,255, .5);
+
+        @include media('<tablet') {
+            order: 3;
+            margin-bottom: 0;
+        }
 
         &:before {
             left: 1px;
@@ -431,9 +445,63 @@ p {
         font-weight: bold;
         line-height: 33px;
         margin: 0;
+
+        @include media('<=desktop-max') {
+            margin-bottom: 20px;
+            order: 2;
+        }
+
+        @include media('<tablet')
     }
 
     a {
         color: $white;
+    }
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 74px 0 50px;
+
+    @include media('<=desktop-max') {
+        padding: 50px 0;
+    }
+
+    @include media('<=tablet') {
+        padding: 30px 0;
+    }
+ 
+    .pagination-link {
+        color: rgba(255,255,255, .25);
+
+        &:hover,
+        &.active {
+            color: rgba(255,255,255, .75);
+        }
+
+        i {
+            font-size: 21px;
+        }
+    }
+
+    p {
+        display: flex;
+        align-items: center;
+        margin: 0 43px;
+        color: rgba(255,255,255, .75);
+
+        .pagination__active {
+            display: block;
+            margin: 0 17px;
+            padding: 8px 16px;
+            color: $white;
+            background-color: $gray;
+        }
+
+        span {
+            margin-left: 5px;
+        }
     }
 }

@@ -6,20 +6,41 @@
     background-position: top center;
 
     .h1 {
-        margin: 68px 0 0;
+        margin: 0;
+        padding: 68px 0 0;
+
+        @include media('<=widescreen') {
+            padding: 0;
+        }
     }
 
     .news-section {
         min-height: 805px;
+
+        @include media('<=widescreen') {
+            min-height: 630px;
+        }
+
+        @include media('<=desktop') {
+            min-height: inherit;
+        }
     }
 
     .news-slider {
         top: 9px;
+
+        @include media('<=desktop') {
+            padding-bottom: 0;
+        }
     }
 
     .slick {
         &-arrow {
             bottom: -79px;
+
+            @include media('<=desktop') {
+                bottom: -60px;
+            }
         }
 
         &-next {
@@ -30,5 +51,15 @@
     .progress-wrapper {
         bottom: 34px;
         margin-left: 67px;
+
+        @include media('<desktop-max') {
+            bottom: 6px;
+            margin-left: 140px;
+        }
+
+        @include media('<=desktop') {
+            bottom: 9px;
+            margin-left: 95px;
+        }
     }
 }
