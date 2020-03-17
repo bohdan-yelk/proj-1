@@ -406,3 +406,34 @@ p {
         }
     }
 }
+
+.card-news {
+    picture {
+        display: block;
+        margin-bottom: 33px;
+    }
+
+    .time {
+        margin-bottom: 16px;
+        padding-left: 40px;
+        font-size: 16px;
+        line-height: 32px;
+        color: rgba(255,255,255, .5);
+
+        &:before {
+            left: 1px;
+            font-size: 20px;
+        }
+    }
+
+    h3 {
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 33px;
+        margin: 0;
+    }
+
+    a {
+        color: $white;
+    }
+}

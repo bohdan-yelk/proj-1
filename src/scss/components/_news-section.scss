@@ -2,7 +2,6 @@
     position: relative;
     min-height: 1050px;
     padding: 100px 0 100px;
-    background-color: $gray-100;
 
     @include media('<=widescreen') {
         min-height: 873px;
