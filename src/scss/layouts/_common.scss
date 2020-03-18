@@ -121,6 +121,10 @@ textarea {
     border-radius: 0;
     outline: none;
 
+    @include media('<phone') {
+        font-size: 14px;
+    }
+
     &::placeholder {
         color: rgba(255, 255, 255, .75);
     }
@@ -619,9 +623,21 @@ p {
     color: $white;
     background-color: $gray;
 
+    @include media('<=desktop-max') {
+        padding: 30px 20px;
+    }
+
     &.touch {
         padding: 100px 75px;
         background-color: $red;
+
+        @include media('<=desktop') {
+            padding: 40px 30px;
+        }
+
+        @include media('<phone') {
+            padding: 30px 20px;
+        }
     }
 
     p {
@@ -653,8 +669,17 @@ p {
         position: relative;
         padding-left: 36px;
         font-size: 16px;
-        font-weight: 22px;
-        
+        line-height: 22px;
+
+        @include media('<=phone') {
+            line-height: 30px
+        }
+
+        @include media('<phone') {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
         &:before {
             position: absolute;
             top: 50%;
@@ -663,6 +688,15 @@ p {
             font-family: 'icomoon';
             font-size: 16px;
             color: rgba(255,255,255,.5);
+
+            @include media('<=phone') {
+                top: -4px;
+                transform: translateY(0);
+            }
+
+            @include media('<phone') {
+                top: 0;
+            }
         }
     }
 
