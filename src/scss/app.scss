@@ -37,6 +37,7 @@ body {
 @import './components/article-section';
 @import './components/documentation-section';
 @import './components/guidelines-section';
+@import './components/contact-us-section';
 
 // Import pages
 @import './pages/home';
@@ -45,3 +46,4 @@ body {
 @import './pages/news';
 @import './pages/article';
 @import './pages/download-area';
+@import './pages/contact-us';

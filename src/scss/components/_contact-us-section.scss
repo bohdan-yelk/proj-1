@@ -1,0 +1,58 @@
+.contact-us-section {
+    width: 100%;
+
+    .h1 {
+        margin-bottom: 0;
+    }
+    
+    h3 {
+        margin: 0;
+        padding: 0;
+        font-size: 48px;
+        font-weight: bold;
+        line-height: 65px;
+    }
+
+    .inner-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: flex-start;
+        margin: 0 -20px;
+        padding: 75px 0;
+
+        &:first-of-type {
+            padding: 150px 0 75px;
+        }
+    }
+    
+    .col {
+        padding: 0 20px;
+
+        &-title {
+            width: 33.3%;
+        }
+
+        &-content {
+            width: 66.6%;
+            margin: 0 -20px;
+        }
+    }
+
+    .tabs {
+        &-list {
+            margin: 0 0 60px 20px;
+        }
+    }
+
+    .contact-block {
+        width: 50%;
+        margin: 0 20px;
+
+        &:only-child {
+            width: calc(50% - 40px);
+        }
+    }
+}

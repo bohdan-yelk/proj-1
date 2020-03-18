@@ -538,3 +538,160 @@ p {
         }
     }
 }
+
+.tabs {
+
+    &-list {
+        position: relative;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        @include media('<desktop') {
+            overflow-x: scroll;
+            padding-bottom: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            content: '';
+            left: 0;
+            right: 0;
+            bottom: -17px;
+            height: 2px;
+            background-color: $gray;
+
+            @include media('<desktop') {
+                right: inherit;
+                width: 100%;
+                bottom: 3px;
+            }
+        }
+
+        li {
+            position: relative;
+            padding: 0 30px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+            cursor: pointer;
+
+            @include media('<=desktop-max') {
+                padding: 0 20px;
+            }
+
+            @include media('<desktop') {
+                flex-shrink: 0;
+                flex-grow: 0;
+                white-space: nowrap;
+            }
+
+            &.active {
+                &:before {
+                    position: absolute;
+                    content: '';
+                    left: 0;
+                    right: 0;
+                    bottom: -17px;
+                    height: 2px;
+                    background-color: $red;
+                }
+            }
+        }
+    }
+
+    &-content {
+        display: none;
+        justify-content: space-between;
+
+        &.active {
+            display: flex; 
+        }
+    }
+}
+
+.contact-block {
+    padding: 50px 40px;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    background-color: $gray;
+
+    &.touch {
+        padding: 100px 75px;
+        background-color: $red;
+    }
+
+    p {
+        margin: 0 0 30px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 25px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+
+    a {
+        color: $white;
+    }
+
+
+    .tel,
+    .mail,
+    .user,
+    .location {
+        position: relative;
+        padding-left: 36px;
+        font-size: 16px;
+        font-weight: 22px;
+        
+        &:before {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            font-family: 'icomoon';
+            font-size: 16px;
+            color: rgba(255,255,255,.5);
+        }
+    }
+
+    .location {
+        &:before {
+            content: '\e905';
+        }
+    }
+
+    .tel {
+        &:before {
+            content: '\e907';
+        }
+    }
+    .mail {
+        &:before {
+            content: '\e906';
+        }
+    }
+    .user {
+        &:before {
+            content: '\e90c';
+        }
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+}

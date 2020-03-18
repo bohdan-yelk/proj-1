@@ -100,12 +100,6 @@
         }
 
         &-content {
-            display: none;
-            justify-content: space-between;
-
-            &.active {
-                display: flex; 
-            }
 
             @include media('<tablet') {
                 flex-direction: column;
