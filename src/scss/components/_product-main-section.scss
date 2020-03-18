@@ -1,0 +1,28 @@
+.product-main-section {
+    padding: 6px 0 200px;
+
+    .inner-wrapper {
+        align-items: center;
+    }
+
+    .col {
+        width: 50%;
+
+        &-title {
+            padding-right: 16%;
+        }
+    }
+
+    .h1 {
+        margin: 0 0 40px;
+        font-size: 72px;
+        line-height: 98px;
+    }
+
+    .descr {
+        font-size: 24px;
+        line-height: 36px;
+        color: rgba(255,255,255,.75);
+    }
+    
+}

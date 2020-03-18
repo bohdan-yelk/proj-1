@@ -38,6 +38,9 @@ body {
 @import './components/documentation-section';
 @import './components/guidelines-section';
 @import './components/contact-us-section';
+@import './components/product-main-section';
+@import './components/featured-section';
+@import './components/brochures-section';
 
 // Import pages
 @import './pages/home';
@@ -47,3 +50,4 @@ body {
 @import './pages/article';
 @import './pages/download-area';
 @import './pages/contact-us';
+@import './pages/product';
