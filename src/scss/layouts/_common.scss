@@ -186,6 +186,16 @@ p {
         line-height: 36px;
         color: $white;
 
+        @include media('<desktop') {
+            font-size: 16px;
+            line-height: 25px;
+        }
+
+        @include media('<tablet') {
+            font-size: 18px;
+            line-height: 36px;
+        }
+
         &:before {
             position: absolute;
             content: '\e900';
@@ -201,6 +211,11 @@ p {
             border-radius: 50%;
             background-color: $red;
             transition: transform .3s ease;
+
+            @include media('<=425px') {
+                top: -5px;
+                transform: translateY(0);
+            }
         }
 
         &:hover {

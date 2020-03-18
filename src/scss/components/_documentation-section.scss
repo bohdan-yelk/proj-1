@@ -1,6 +1,14 @@
 .documentation-section {
     padding: 150px 0 146px;
 
+    @include media('<=desktop-max') {
+        padding: 100px 0;
+    }
+
+    @include media('<=tablet') {
+        padding: 60px 0 20px;
+    }
+
     .inner-wrapper {
         flex-direction: column;
     }
@@ -9,6 +17,12 @@
         font-size: 48px;
         line-height: 65px;
         margin: 7px 0 61px;
+
+        @include media('<desktop') {
+            font-size: 32px;
+            line-height: 44px;
+            margin: 0 0 40px;
+        }
     }
 
     h4 {
@@ -27,6 +41,11 @@
             padding: 0;
             list-style: none;
 
+            @include media('<desktop') {
+                overflow-x: scroll;
+                padding-bottom: 20px;
+            }
+
             &:before {
                 position: absolute;
                 content: '';
@@ -35,6 +54,12 @@
                 bottom: -17px;
                 height: 2px;
                 background-color: $gray;
+
+                @include media('<desktop') {
+                    right: inherit;
+                    width: 100%;
+                    bottom: 3px;
+                }
             }
 
             li {
@@ -45,6 +70,16 @@
                 font-weight: 600;
                 line-height: 25px;
                 cursor: pointer;
+
+                @include media('<=desktop-max') {
+                    padding: 0 20px;
+                }
+
+                @include media('<desktop') {
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                    white-space: nowrap;
+                }
 
                 &.active {
                     &:before {
@@ -69,7 +104,11 @@
             justify-content: space-between;
 
             &.active {
-                display: flex;
+                display: flex; 
+            }
+
+            @include media('<tablet') {
+                flex-direction: column;
             }
         }
     }
@@ -82,6 +121,21 @@
     .img-block {
         position: relative;
         padding-top: 139px;
+
+        @include media('<=desktop') {
+            padding-right: 70px;
+        }
+
+        @include media('<desktop') {
+            width: 40%;
+            padding-right: 0;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+            margin: 0 0 40px;
+        }
+
         h3 {
             position: absolute;
             top: 0;
@@ -91,11 +145,28 @@
             line-height: 44px;
             color: rgba(255, 255, 255, .25);
 
+            @include media('<=desktop') {
+                font-size: 24px;
+                line-height: 33px;
+            }
+
             span {
                 display: block;
                 font-size: 120px;
                 font-weight: bold;
                 line-height: 163px;
+
+                @include media('<=desktop') {
+                    font-size: 48px;
+                    line-height: 65px;
+                }
+            }
+        }
+
+        img {
+            @include media('<tablet') {
+                display: block;
+                margin: 0 auto;
             }
         }
     }
@@ -105,5 +176,14 @@
         flex-direction: column;
         justify-content: center;
         margin: 22px 0 0 41px;
+
+        @include media('<desktop') {
+            width: 60%;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+            margin: 22px 0 0;
+        }
     }
 }

@@ -2,8 +2,26 @@
     padding: 150px 0;
     background-color: $gray;
 
+    @include media('<=desktop-max') {
+        padding: 100px 0;
+    }
+
+    @include media('<=tablet') {
+        padding: 60px 0 20px;
+    }
+
+    .inner-wrapper {
+        @include media('<tablet') {
+            flex-wrap: wrap;
+        }
+    }
+
     .col {
         width: 50%;
+
+        @include media('<645px') {
+            width: 100%;
+        }
     }
 
     h3 {
@@ -11,5 +29,10 @@
         font-size: 48px;
         font-weight: bold;
         line-height: 65px;
+
+        @include media('<desktop') {
+            font-size: 32px;
+            line-height: 44px;
+        }
     }
 }
