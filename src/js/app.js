@@ -88,7 +88,15 @@ import { log } from './utils'
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
     }, 1000);
-});
+  });
+
+  //tabs 
+
+  $('ul.tabs-list').on('click', 'li:not(.active)', function() {
+    $(this)
+      .addClass('active').siblings().removeClass('active')
+      .closest('div.tabs').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
+  });
 
   });
 

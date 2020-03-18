@@ -1,0 +1,109 @@
+.documentation-section {
+    padding: 150px 0 146px;
+
+    .inner-wrapper {
+        flex-direction: column;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 65px;
+        margin: 7px 0 61px;
+    }
+
+    h4 {
+        margin: 0 0 40px;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 33px;
+    }
+
+    .tabs {
+
+        &-list {
+            position: relative;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            &:before {
+                position: absolute;
+                content: '';
+                left: 0;
+                right: 0;
+                bottom: -17px;
+                height: 2px;
+                background-color: $gray;
+            }
+
+            li {
+                position: relative;
+                padding: 0 30px;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+                line-height: 25px;
+                cursor: pointer;
+
+                &.active {
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        left: 0;
+                        right: 0;
+                        bottom: -17px;
+                        height: 2px;
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+
+        &-wrapper {
+            padding: 77px 0 0px;
+        }
+
+        &-content {
+            display: none;
+            justify-content: space-between;
+
+            &.active {
+                display: flex;
+            }
+        }
+    }
+
+    .img-block,
+    .descr-block {
+        width: 50%;
+    }
+
+    .img-block {
+        position: relative;
+        padding-top: 139px;
+        h3 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            font-size: 32px;
+            line-height: 44px;
+            color: rgba(255, 255, 255, .25);
+
+            span {
+                display: block;
+                font-size: 120px;
+                font-weight: bold;
+                line-height: 163px;
+            }
+        }
+    }
+
+    .descr-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 22px 0 0 41px;
+    }
+}
