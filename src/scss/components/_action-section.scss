@@ -1,27 +1,64 @@
 .action-section {
     padding: 96px 0 150px;
 
+    @include media('<=desktop-max') {
+        padding: 75px 0 150px;
+    }
+
+    @include media('<=tablet') {
+        padding: 30px 0 60px;
+    }
+
     .inner-wrapper {
         align-items: flex-start;
         justify-content: space-around;
+
+        @include media('<tablet') {
+            flex-direction: column;
+        }
     }
 
     .col {
         width: 50%;
 
+        @include media('<tablet') {
+            width: 100%;
+        }
+
         &-form {
             max-width: 650px;
+
+            @include media('<=desktop-max') {
+                margin-right: 50px;
+            }
+
+            @include media('<tablet') {
+                max-width: inherit;
+                margin: 0 0 60px;
+            }
         }
 
         &-content {
             max-width: 520px;
             font-size: 16px;
             line-height: 32px;
+
+            @include media('<tablet') {
+                max-width: inherit;
+            }
         }
     }
 
     .contact-block {
         padding: 150px;
+
+        @include media('<=widescreen') {
+            padding: 50px 40px;
+        }
+
+        @include media('<=tablet') {
+            padding: 40px 30px;
+        }
     }
 
     h3 {
@@ -29,6 +66,12 @@
         font-size: 32px;
         font-weight: bold;
         line-height: 44px;
+
+        @include media('<=desktop-max') {
+            margin: 0 0 20px;
+            font-size: 24px;
+            line-height: 33px;
+        }
     }
 
     p,
@@ -39,6 +82,12 @@
     p {
         margin: 0 0 60px;
 
+        @include media('<=desktop-max') {
+            margin: 0 0 40px;
+            font-size: 16px;
+            line-height: 32px;
+        }
+
         &:last-of-type {
             margin: 0;
         }
@@ -48,9 +97,17 @@
         margin: 0 0 60px;
         padding: 0 0 0 20px;
 
+        @include media('<=desktop-max') {
+            margin: 0 0 40px;
+        }
+
         li {
             font-weight: bold;
             margin-bottom: 30px;
+
+            @include media('<=desktop-max') {
+                margin: 0 0 20px;
+            }
 
             &:last-of-type {
                 margin-bottom: 0;

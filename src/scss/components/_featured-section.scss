@@ -2,13 +2,27 @@
     position: relative;
     padding: 0 0 75px;
 
+    @include media('<=tablet') {
+        padding: 0 0 30px;
+    }
+
     .inner-wrapper {
         justify-content: flex-end;
     }
-    
-    .video_wrapper {
+
+    .col-wrapper {
         position: absolute;
         width: 50%;
+
+        @include media('<=tablet') {
+            position: relative;
+            width: 100%;
+            margin: 0 0 60px;
+        }
+        
+    }
+    
+    .video_wrapper {       
         padding-bottom: 56.25%;
         height: 0;
 
@@ -32,7 +46,7 @@
             padding: 0;
             border: 0;
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-color: $gray-100;
 
             &:hover {
@@ -84,12 +98,26 @@
     .content-wrapper {
         width: 50%;
         padding: 150px 0 0 151px;
+
+        @include media('<=desktop-max') {
+            padding: 0 0 0 50px;
+        }
+
+        @include media('<=tablet') {
+            width: 100%;
+            padding: 0;
+        }
     }
 
     h2 {
         margin: 0 0 10px;
         font-size: 48px;
         line-height: 65px;
+
+        @include media('<=desktop-max') {
+            font-size: 40px;
+            line-height: 54px;
+        }
     }
 
     .features-list {
@@ -101,6 +129,10 @@
             padding: 30px 0;
             border-bottom: 1px solid rgba(255,255,255,.2);
             color: rgba(255,255,255,.75);
+
+            @include media('<=desktop-max') {
+                padding: 20px 0;
+            }
 
             &:last-of-type {
                 border: none
@@ -115,8 +147,41 @@
             font-size: 18px;
             line-height: 25px;
 
+            @include media('<=desktop-max') {
+                margin: 0 0 15px;
+            }
+
+            @include media('<desktop') {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            @include media('<=tablet') {
+                flex-direction: row;
+                align-items: center;
+            }
+
+            @include media('<tablet') {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             &:last-of-type {
                 margin: 0;
+            }
+
+            span {
+                @include media('<desktop') {
+                    margin: 0 0 15px;
+                }
+
+                @include media('<=tablet') {
+                    margin: 0;
+                }
+
+                @include media('<tablet') {
+                    margin: 0 0 15px;
+                }
             }
         }
 
