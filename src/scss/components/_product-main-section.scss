@@ -15,7 +15,7 @@
     }
 
     @include media('<tablet') {
-        background-image: none;
+        background-position: center 94%;
     }
 
     .breadcrumbs {
@@ -46,17 +46,6 @@
                 padding: 0;
             }
         }
-
-        &-img {
-            @include media('<tablet') {
-                background-image: url('/images/single-bg.png');
-                background-position: top center;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-        }
-
-
     }
 
     .h1 {
