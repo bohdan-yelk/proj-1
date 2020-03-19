@@ -1,5 +1,13 @@
 .product-main-section {
-    padding: 6px 0 200px;
+    padding: 6px 0 196px;
+    background-image: url('/images/single-bg.png');
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .breadcrumbs {
+        padding: 55px 0 70px;
+    }
 
     .inner-wrapper {
         align-items: center;
@@ -14,7 +22,7 @@
     }
 
     .h1 {
-        margin: 0 0 40px;
+        margin: 19px 0 40px;
         font-size: 72px;
         line-height: 98px;
     }

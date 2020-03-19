@@ -83,22 +83,39 @@ import { log } from './utils'
   // anchor links 
   
   $(document).on('click', '.category-link', function (event) {
-    event.preventDefault();
+    event.preventDefault()
 
     $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
-  });
+    }, 1000)
+  })
 
   //tabs 
 
   $('ul.tabs-list').on('click', 'li:not(.active)', function() {
     $(this)
       .addClass('active').siblings().removeClass('active')
-      .closest('div.tabs').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active');
-  });
+      .closest('div.tabs').find('div.tabs-content').removeClass('active').eq($(this).index()).addClass('active')
+  })
 
-  });
+  })
+
+  // custom youtube play-button
+
+  $(document).on('click','.js-videoPoster',function(e) {
+    e.preventDefault()
+    var poster = $(this)
+    var wrapper = poster.closest('.js-videoWrapper')
+    videoPlay(wrapper)
+  })
+  
+
+  function videoPlay(wrapper) {
+    var iframe = wrapper.find('.js-videoIframe')
+    var src = iframe.data('src')
+    wrapper.addClass('videoWrapperActive')
+    iframe.attr('src',src)
+  }
 
   /* --------  Apply global listeners  -------- */
 })(window.jQuery)
