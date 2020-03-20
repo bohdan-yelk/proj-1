@@ -117,5 +117,15 @@ import { log } from './utils'
     iframe.attr('src',src)
   }
 
+  //hover img 404 page
+
+ $('#back').hover(function() {
+   $('.not-found').addClass('active')
+ },
+ function() {
+  $('.not-found').removeClass('active')
+ })
+
+
   /* --------  Apply global listeners  -------- */
 })(window.jQuery)

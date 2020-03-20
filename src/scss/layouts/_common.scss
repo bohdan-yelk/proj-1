@@ -623,16 +623,16 @@ p {
     color: $white;
     background-color: $gray;
 
-    @include media('<=desktop-max') {
-        padding: 30px 20px;
+    @include media('<=widescreen') {
+        padding: 50px 30px;
     }
 
     &.touch {
         padding: 100px 75px;
         background-color: $red;
 
-        @include media('<=desktop') {
-            padding: 40px 30px;
+        @include media('<=widescreen') {
+            padding: 50px 30px;
         }
 
         @include media('<phone') {
@@ -659,6 +659,9 @@ p {
 
     a {
         color: $white;
+        @include media('<=widescreen') {
+            line-height: 32px;
+        }
     }
 
 
@@ -671,7 +674,12 @@ p {
         font-size: 16px;
         line-height: 22px;
 
+        @include media('<=widescreen') {
+            line-height: 32px;
+        }
+
         @include media('<=phone') {
+            padding-left: 28px;
             line-height: 30px
         }
 
@@ -689,9 +697,13 @@ p {
             font-size: 16px;
             color: rgba(255,255,255,.5);
 
-            @include media('<=phone') {
+            @include media('<=widescreen') {
                 top: -4px;
                 transform: translateY(0);
+            }
+
+            @include media('<=phone') {
+                top: -4px;
             }
 
             @include media('<phone') {
