@@ -3,7 +3,7 @@ body.error404 {
 }
 
 .not-found {
-    background-image: url('/images/404.png');
+    background-image: url('../../images/404.png');
     background-repeat: no-repeat;
     background-position: left center;
     padding: 312px 0 300px;
@@ -17,7 +17,7 @@ body.error404 {
     }
 
     &.active {
-        background-image: url('/images/404-hover.png');
+        background-image: url('../../images/404-hover.png');
     }
 
     .inner-wrapper {
@@ -88,12 +88,12 @@ body.error404 {
                 }
 
                 &:before {
-                    background-image: url('/images/vector-left.svg');
+                    background-image: url('../../images/vector-left.svg');
                     z-index: -1;
                 }
 
                 &:after {
-                    background-image: url('/images/vector-right.svg');
+                    background-image: url('../../images/vector-right.svg');
                     z-index: 2;
                 }
             }
