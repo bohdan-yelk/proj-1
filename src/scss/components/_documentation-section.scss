@@ -30,6 +30,10 @@
         font-size: 24px;
         font-weight: bold;
         line-height: 33px;
+
+        @include media('<425px') {
+            margin: 0 0 28px;
+        }
     }
 
     .tabs {
@@ -97,6 +101,10 @@
 
         &-wrapper {
             padding: 77px 0 0px;
+
+            @include media('<425px') {
+                padding: 27px 0 0;
+            }
         }
 
         &-content {
@@ -130,6 +138,11 @@
             margin: 0 0 40px;
         }
 
+        @include media('<425px') {
+            padding-top: 77px;
+            margin: 0 0 19px;   
+        }
+
         h3 {
             position: absolute;
             top: 0;
@@ -138,6 +151,7 @@
             font-size: 32px;
             line-height: 44px;
             color: rgba(255, 255, 255, .25);
+            z-index: -1;
 
             @include media('<=desktop') {
                 font-size: 24px;

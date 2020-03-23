@@ -9,6 +9,12 @@
         padding: 30px 0;
     }
 
+    &:not(.reverse) {
+        p {
+            color: rgba(255,255,255, .75);
+        }
+    }
+
     &:first-of-type {
         padding: 200px 0 100px;
 

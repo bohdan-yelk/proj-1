@@ -62,6 +62,7 @@
         p {
             width: 33%;
             margin: 0 0 0 8.59%;
+            color: rgba(255,255,255, .75);
 
             @include media('<=desktop-max') {
                 width: 65%;
@@ -84,7 +85,7 @@
         flex-wrap: wrap;
 
         @include media('<desktop') {
-            justify-content: center;
+            justify-content: flex-start;
             margin: 0 -15px;
         }
     }

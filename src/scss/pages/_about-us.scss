@@ -3,11 +3,16 @@
     background-image: url('../../images/about-us-bg.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center 100px;
+
+    @include media('<tablet') {
+        background-position: center 60px;
+    }
 
     @include media('<=widescreen') {
         background-size: inherit;
     }
+
 
     .h1 {
         margin: 0;

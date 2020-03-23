@@ -6,8 +6,7 @@ body.error404 {
     background-image: url('../../images/404.png');
     background-repeat: no-repeat;
     background-position: left center;
-    padding: 312px 0 300px;
-
+    
     @include media('<=desktop-max') {
         padding: 0;
     }
@@ -24,10 +23,10 @@ body.error404 {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        height: 100vh;
 
         @include media('<=desktop-max') {
             justify-content: center;
-            height: 100vh;
         }
     }
 
@@ -107,6 +106,15 @@ body.error404 {
         @include media('<=desktop-max') {
             margin: 0 0 30px;
         }
+
+        @include media('<=tablet') {
+            width: 50%;
+            text-align: center;
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+        }
     }
 
     .more {
@@ -116,9 +124,6 @@ body.error404 {
             align-self: center;
         }
 
-        @include media('<=tablet') {
-            align-self: flex-start;
-        }
 
         &:hover {
             color: $white;
@@ -141,5 +146,4 @@ body.error404 {
             transition: background .1s ease;
         }
     }
-
 }

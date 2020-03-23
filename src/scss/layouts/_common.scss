@@ -198,6 +198,7 @@ p {
         @include media('<tablet') {
             font-size: 18px;
             line-height: 36px;
+            display: block;
         }
 
         &:before {
@@ -217,7 +218,7 @@ p {
             transition: transform .3s ease;
 
             @include media('<=425px') {
-                top: -5px;
+                top: 0px;
                 transform: translateY(0);
             }
         }
@@ -281,29 +282,31 @@ p {
 }
 
 .card {
-    display: flex;
-    align-items: center;
-    padding: 50px 50px 39px 50px;
-    font-size: 18px;
-    line-height: 36px;
-    background-color: $gray;
-
-    @include media('<=desktop-max') {
-        padding: 30px;
-    }
-
+    
     @include media('<desktop') {
-        flex-direction: column;
-        width: 30%;
-        margin: 0 15px;
-    }
-
-    @include media('<=tablet') {
-        width: 45%;
+        width: 33.3%;
+        padding: 0 15px;
     }
 
     @include media('<tablet') {
         width: 100%;
+    }
+
+    .content-wrapper {
+        display: flex;
+        align-items: center;
+        padding: 50px 50px 39px 50px;
+        font-size: 18px;
+        line-height: 36px;
+        background-color: $gray;
+
+        @include media('<=desktop-max') {
+            padding: 30px;
+        }
+    
+        @include media('<desktop') {
+            flex-direction: column;
+        }
     }
 
     picture {
@@ -493,6 +496,10 @@ p {
 
     a {
         color: $white;
+
+        &:hover {
+            color: rgba(255,255,255,.5);
+        }
     }
 }
 
@@ -580,6 +587,7 @@ p {
             font-size: 18px;
             font-weight: 600;
             line-height: 25px;
+            color: rgba(255,255,255,.75);
             cursor: pointer;
 
             @include media('<=desktop-max') {
@@ -593,6 +601,8 @@ p {
             }
 
             &.active {
+                color: $white;
+
                 &:before {
                     position: absolute;
                     content: '';
@@ -741,3 +751,4 @@ p {
     }
 
 }
+
